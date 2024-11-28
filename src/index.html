@@ -55,9 +55,12 @@
         
         <section class="hero">
 
-            <img class="desktop" src="images/Hero_Desktop.webp">
-            <img class="mobile" src="images/Hero_Mobile.webp">
-            <img class="tablet" src="images/Hero_Tablet.webp">
+            <!-- 이미지 세 개를 불러 놓고 display none 하는 것이 아니라 해상도에 맞는 파일만 불러옴 -->
+            <picture>
+                <source width="576" height="576" media="(max-width: 575px)" srcset="images/Hero_Mobile.webp">
+                <source width="960" height="770" media="(min-width: 576px) and (max-width: 960px)" srcset="images/Hero_Tablet.webp">
+                <img width="1920" height="893" src="images/Hero_Desktop.webp">
+            </picture>
 
            
             <div class="hero-content">
